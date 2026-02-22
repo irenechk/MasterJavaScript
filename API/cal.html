@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+<body>
+    <div class="numbers">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <div class="operators">
+        <div>+</div>
+        <div>=</div>
+        <div>-</div>
+        <div>*</div>
+        <div>/</div>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        let numbers=document.querySelectorAll('.numbers div');
+        let result=document.querySelector('#result');
+        numbers.forEach((number)=>{
+            number.addEventListener('click',()=>{
+                console.log(number.textContent);
+                result.innerText*=number.textContent
+            });
+
+        });
+
+        let operators=document.querySelectorAll('.operators div')
+        let result1=document.querySelector('#result');
+        operators.forEach((operator)=>{
+            operator.addEventListener('click',()=>{
+                console.log(operator.textContent);
+                result.innerText*=operator.textContent
+            });
+
+        });
+    </script>
+
+</body>
+</html>

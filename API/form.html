@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Auto Save</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="username" placeholder="Enter username">
+        <br><br>
+        <input type="text" id="password" placeholder="Enter password">
+    </form>
+
+    <script>
+        // Get input elements
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+
+        // Restore saved data when page loads
+        username.value = sessionStorage.getItem('name') || '';
+        password.value = sessionStorage.getItem('pass') || '';
+
+        // Function to save data
+        function saveData() {
+            sessionStorage.setItem('name', username.value);
+            sessionStorage.setItem('pass', password.value);
+        }
+
+        // Save data whenever user types
+        username.addEventListener('input', saveData);
+        password.addEventListener('input', saveData);
+    </script>
+
+</body>
+</html>

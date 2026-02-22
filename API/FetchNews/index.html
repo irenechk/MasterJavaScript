@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📰 Daily News</h1>
+    <p>Latest Headlines Around the World</p>
+
+    <!-- Breaking News -->
+    <div class="ticker">
+        <span id="tickerText">Loading breaking news...</span>
+    </div>
+</header>
+
+<!-- Controls -->
+<section class="controls">
+
+    <input type="text" id="searchInput" placeholder="Search news...">
+
+   <div class="categories">
+    <button onclick="loadCategory('general')">General</button>
+    <button onclick="loadCategory('business')">Business</button>
+    <button onclick="loadCategory('technology')">Technology</button>
+    <button onclick="loadCategory('sports')">Sports</button>
+    <button onclick="loadCategory('health')">Health</button>
+    <button onclick="loadCategory('science')">Science</button>
+</div>
+
+</section>
+
+<main>
+    <div id="newsBox" class="news-grid"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

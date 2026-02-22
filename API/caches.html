@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+<body>
+      <button onclick="Save()">Save to cache</button>
+      <button onclick="Load()">Load from cache</button>
+      <img src="" alt=""/>
+
+      <script>
+        let path="https://share.google/FT7vvzc6p0SBJaaBm";
+           async function save(){
+                // creat variable inside cache, then add media to it
+                let myBox=await caches.open('box')
+                myBox.add(path);
+            }
+
+            async function Load(){
+                // get url
+                // open the box, match/get url/insert the image url in the image tag
+                let myBox= await caches.open("box");
+                let response= await caches.match(path);
+                console.log(response.url)
+                documeny.querySelector('img').scr=response.url
+
+            }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+<body>
+    <!-- wht; duration; path -->
+     <!-- username; 5s; every page -->
+      <button onclick="setCookie()">Agree to terms</button>
+      <button onclick="checkCookie()">Show cookie</button>
+      <p></p>
+      <script>
+        function setCookie(){
+            document.cookie="username=Irene;max-age=5;path=/"
+        }
+        function checkCookie(){
+            document.querySelector('p').innerText=document.cookie
+        }
+
+      </script>
+</body>
+</html>

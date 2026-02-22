@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="section">
+        hello
+        <span>world</span>
+        <!--<p></p>-->
+        <!--<p>world</p>-->
+    </div>
+    <script>
+       let box =  document.getElementById('box');
+       let section = document.getElementsByClassName('section');
+       console.log(box)
+       console.log(section)
+       let spantag = document.querySelector('#box');
+       console.log(spantag.outerHTML)
+// parent node is div
+// remove child-span
+       let parentNode= document.querySelector('#box');
+       let childNode = document.querySelector('#box span')
+    //    parentNode.removeChild(childNode)
+       // here removeChild is an fxn so 'C' should be capital
+
+       // replace
+
+    //   let replaced= childNode.replaceWith('p');
+    //   console.log(replaced);
+      let newNode = document.createElement('p');
+      newNode.textContent ="earth"
+      newNode.style='display:inline-block'
+      parentNode.replaceChild(newNode ,childNode);
+      console.log(parentNode,innerHTML)
+      console.log(parentNode,innerText)
+      console.log(parentNode,textContent)
+
+    </script>
+</body>
+</html>
